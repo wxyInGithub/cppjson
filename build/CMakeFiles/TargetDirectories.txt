@@ -1,0 +1,4 @@
+G:/Documents/Programs/cppDemos/cppjson/build/CMakeFiles/cppjson.dir
+G:/Documents/Programs/cppDemos/cppjson/build/CMakeFiles/test.dir
+G:/Documents/Programs/cppDemos/cppjson/build/CMakeFiles/edit_cache.dir
+G:/Documents/Programs/cppDemos/cppjson/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+D:\msys64\ucrt64\bin\ar.exe qc libcppjson.a CMakeFiles/cppjson.dir/src/array.cpp.obj CMakeFiles/cppjson.dir/src/object.cpp.obj CMakeFiles/cppjson.dir/src/jsonValue.cpp.obj CMakeFiles/cppjson.dir/src/print.cpp.obj CMakeFiles/cppjson.dir/src/parser.cpp.obj
+D:\msys64\ucrt64\bin\ranlib.exe libcppjson.a
