@@ -8,18 +8,19 @@ namespace cppjson{
             bool has_inner_array=false;
         };
         
-        const ToStringResult JsonValueToString(const JsonValue& val, int layer=1)
+        const ToStringResult JsonValueToString(const JsonValue& val, int layer=1, bool strict_json=false)
         {
             ToStringResult result;
             std::ostringstream val_tostring;
             switch(val.type)
             {
                 case JsonType::Empty:
-                    throw std::runtime_error("Trying to get an empty JsonValue!");
+                    throw std::runtime_error("FROM print.cpp const ToStringResult JsonValueToString(const JsonValue& val, int layer=1, bool strict_json=false)\nTrying to get an empty JsonValue!");
                 case JsonType::Object:
-                    // if(layer!=1)
-                    //     val_tostring << '\n' << std::string(layer, '\t');
-                    val_tostring << printObject(val.object_val, layer);
+                    if(strict_json)
+                        val_tostring << stringify(val.object_val, layer);
+                    else
+                        val_tostring << printObject(val.object_val, layer);
                     break;
                 case JsonType::Array:
                     result.has_inner_array = true;
@@ -87,6 +88,24 @@ namespace cppjson{
         return result.str();
     }
 
+    std::string stringify(const Object& json, int layer)
+    {
+        std::ostringstream result;
+        result << "{\n";
+        size_t final_pos = json.size()-1;
+        size_t current_pos = 0;
+        for(const auto& item : json)
+        {
+            result << std::string(layer, '\t') << '\"' << item.first << "\": ";
+            const ToStringResult tostring_result = JsonValueToString(item.second, layer+1, true);
+            result << tostring_result.val_tostring;
+            result << (current_pos++ < final_pos ? ", \n" : "\n");
+        }
+        result << std::string(layer-1, '\t') << "}";
+
+        return result.str();
+    }
+
     std::ostream& operator<<(std::ostream& os, const Object& object)
     {
         os << printObject(object);
@@ -100,6 +119,11 @@ namespace cppjson{
     std::ostream& operator<<(std::ostream& os, const JsonValue& val)
     {
         os << JsonValueToString(val).val_tostring;
+        return os;
+    }
+    std::ostream& operator<<(std::ostream& os, const JsonType& type)
+    {
+        os << JSONTYPE_HASH_.at(type);
         return os;
     }
 }

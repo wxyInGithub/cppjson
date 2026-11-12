@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "G:/Documents/Programs/cppDemos/cppjson/src/object.cpp" "CMakeFiles/cppjson.dir/src/object.cpp.obj" "gcc" "CMakeFiles/cppjson.dir/src/object.cpp.obj.d"
   "G:/Documents/Programs/cppDemos/cppjson/src/parser.cpp" "CMakeFiles/cppjson.dir/src/parser.cpp.obj" "gcc" "CMakeFiles/cppjson.dir/src/parser.cpp.obj.d"
   "G:/Documents/Programs/cppDemos/cppjson/src/print.cpp" "CMakeFiles/cppjson.dir/src/print.cpp.obj" "gcc" "CMakeFiles/cppjson.dir/src/print.cpp.obj.d"
+  "G:/Documents/Programs/cppDemos/cppjson/src/writer.cpp" "CMakeFiles/cppjson.dir/src/writer.cpp.obj" "gcc" "CMakeFiles/cppjson.dir/src/writer.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

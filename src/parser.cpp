@@ -219,7 +219,7 @@ namespace cppjson{
                     current = result_.the_last_pos;
 
                     if(!key.empty() && !val.isEmpty())
-                        object.insert({key, val});
+                        object.insert(key, val);
                 }
             }
     
@@ -235,8 +235,8 @@ namespace cppjson{
         std::ifstream file(path);
         if(!file)
         {
-            std::cout << "!!!------------Error-----------!!!\nFile: " << path << " doesn't exist!" << std::endl;
-            return result;
+            std::string error = "FROM parser.cpp Object parse(const std::string& path)\nFailed to open file " + path;
+            throw std::runtime_error(error);
         }
         const std::string content((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
         if(!content.empty())

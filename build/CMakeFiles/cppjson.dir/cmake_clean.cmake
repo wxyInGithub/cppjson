@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cppjson.dir/src/parser.cpp.obj.d"
   "CMakeFiles/cppjson.dir/src/print.cpp.obj"
   "CMakeFiles/cppjson.dir/src/print.cpp.obj.d"
+  "CMakeFiles/cppjson.dir/src/writer.cpp.obj"
+  "CMakeFiles/cppjson.dir/src/writer.cpp.obj.d"
   "libcppjson.a"
   "libcppjson.pdb"
 )

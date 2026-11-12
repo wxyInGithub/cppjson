@@ -131,11 +131,26 @@ CMakeFiles/cppjson.dir/src/print.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cppjson.dir/src/print.cpp.s"
 	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\Documents\Programs\cppDemos\cppjson\src\print.cpp -o CMakeFiles\cppjson.dir\src\print.cpp.s
 
+CMakeFiles/cppjson.dir/src/writer.cpp.obj: CMakeFiles/cppjson.dir/flags.make
+CMakeFiles/cppjson.dir/src/writer.cpp.obj: CMakeFiles/cppjson.dir/includes_CXX.rsp
+CMakeFiles/cppjson.dir/src/writer.cpp.obj: G:/Documents/Programs/cppDemos/cppjson/src/writer.cpp
+CMakeFiles/cppjson.dir/src/writer.cpp.obj: CMakeFiles/cppjson.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=G:\Documents\Programs\cppDemos\cppjson\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cppjson.dir/src/writer.cpp.obj"
+	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cppjson.dir/src/writer.cpp.obj -MF CMakeFiles\cppjson.dir\src\writer.cpp.obj.d -o CMakeFiles\cppjson.dir\src\writer.cpp.obj -c G:\Documents\Programs\cppDemos\cppjson\src\writer.cpp
+
+CMakeFiles/cppjson.dir/src/writer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cppjson.dir/src/writer.cpp.i"
+	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E G:\Documents\Programs\cppDemos\cppjson\src\writer.cpp > CMakeFiles\cppjson.dir\src\writer.cpp.i
+
+CMakeFiles/cppjson.dir/src/writer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cppjson.dir/src/writer.cpp.s"
+	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\Documents\Programs\cppDemos\cppjson\src\writer.cpp -o CMakeFiles\cppjson.dir\src\writer.cpp.s
+
 CMakeFiles/cppjson.dir/src/parser.cpp.obj: CMakeFiles/cppjson.dir/flags.make
 CMakeFiles/cppjson.dir/src/parser.cpp.obj: CMakeFiles/cppjson.dir/includes_CXX.rsp
 CMakeFiles/cppjson.dir/src/parser.cpp.obj: G:/Documents/Programs/cppDemos/cppjson/src/parser.cpp
 CMakeFiles/cppjson.dir/src/parser.cpp.obj: CMakeFiles/cppjson.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=G:\Documents\Programs\cppDemos\cppjson\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cppjson.dir/src/parser.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=G:\Documents\Programs\cppDemos\cppjson\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cppjson.dir/src/parser.cpp.obj"
 	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cppjson.dir/src/parser.cpp.obj -MF CMakeFiles\cppjson.dir\src\parser.cpp.obj.d -o CMakeFiles\cppjson.dir\src\parser.cpp.obj -c G:\Documents\Programs\cppDemos\cppjson\src\parser.cpp
 
 CMakeFiles/cppjson.dir/src/parser.cpp.i: cmake_force
@@ -152,6 +167,7 @@ cppjson_OBJECTS = \
 "CMakeFiles/cppjson.dir/src/object.cpp.obj" \
 "CMakeFiles/cppjson.dir/src/jsonValue.cpp.obj" \
 "CMakeFiles/cppjson.dir/src/print.cpp.obj" \
+"CMakeFiles/cppjson.dir/src/writer.cpp.obj" \
 "CMakeFiles/cppjson.dir/src/parser.cpp.obj"
 
 # External object files for target cppjson
@@ -161,10 +177,11 @@ libcppjson.a: CMakeFiles/cppjson.dir/src/array.cpp.obj
 libcppjson.a: CMakeFiles/cppjson.dir/src/object.cpp.obj
 libcppjson.a: CMakeFiles/cppjson.dir/src/jsonValue.cpp.obj
 libcppjson.a: CMakeFiles/cppjson.dir/src/print.cpp.obj
+libcppjson.a: CMakeFiles/cppjson.dir/src/writer.cpp.obj
 libcppjson.a: CMakeFiles/cppjson.dir/src/parser.cpp.obj
 libcppjson.a: CMakeFiles/cppjson.dir/build.make
 libcppjson.a: CMakeFiles/cppjson.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=G:\Documents\Programs\cppDemos\cppjson\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libcppjson.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=G:\Documents\Programs\cppDemos\cppjson\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libcppjson.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\cppjson.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\cppjson.dir\link.txt --verbose=$(VERBOSE)
 

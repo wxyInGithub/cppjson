@@ -16,13 +16,19 @@ using namespace std;
 //     cout << content << endl;
 // }
 
-const string _PATH = "G:/Documents/Programs/cppDemos/cppjson/package.json";
+const string _PATH = "G:/Documents/Programs/cppDemos/cppjson/write_test.json";
 
 int main()
 {
     cppjson::Object package = cppjson::parse(_PATH);
-    for(auto [key, val] : package["optionalDependencies"].to_object())
-        cout << key << ": " << val << endl;
+    cppjson::Object pcl = package["PCL"];
+    pcl.erase("type");
+    pcl.insert("hello", "world");
+    cout << pcl << endl;
+    // for(auto [key, val] : package["optionalDependencies"].to_object())
+    //     cout << key << ": " << val << endl;
+    cppjson::dump(_PATH, pcl);
+
 
     return 0;
 }

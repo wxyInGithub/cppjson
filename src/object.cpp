@@ -37,8 +37,25 @@ namespace cppjson{
     {
         return this->content.size();
     }
-    void Object::insert(std::pair<std::string, JsonValue> kv)
+    void Object::insert(const std::string& key, const JsonValue& val)
     {
-        this->content.insert(kv);
+        this->content.insert({key, val});
+    }
+    void Object::erase(const std::string& key)
+    {
+        this->content.erase(key);
+    }
+    void Object::clear()
+    {
+        this->content.clear();
+    }
+    bool Object::is_empty() const
+    {
+        return this->content.empty();
+    }
+    const std::string Object::to_string(bool strict_json) const
+    {
+        if(strict_json) return printObject(*this);
+        else            return stringify(*this);
     }
 }

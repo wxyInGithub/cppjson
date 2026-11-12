@@ -41,4 +41,24 @@ namespace cppjson{
     {
         this->content.push_back(val);
     }
+    void Array::erase(const size_t& pos)
+    {
+        this->content.erase(this->content.begin()+pos);
+    }
+    void Array::pop()
+    {
+        this->content.pop_back();
+    }
+    void Array::clear()
+    {
+        this->content.clear();
+    }
+    bool Array::is_empty() const
+    {
+        return this->content.empty();
+    }
+    const std::string Array::to_string() const
+    {
+        return printArray(*this);
+    }
 }

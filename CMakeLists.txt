@@ -20,6 +20,7 @@ add_library(cppjson STATIC
     src/object.cpp
     src/jsonValue.cpp
     src/print.cpp
+    src/writer.cpp
     src/parser.cpp)
 
 # offer api
